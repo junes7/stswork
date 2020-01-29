@@ -1,0 +1,16 @@
+package member;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class SearchController {
+	@RequestMapping("/search.do")
+	public ModelAndView search() {
+		/*req.setCharacterEncoding("EUC-KR");*/
+		
+		String search = req.getParameter("search");
+		System.out.println("�˻���:"+search);
+		return new ModelAndView("test/index");
+	}
+}
